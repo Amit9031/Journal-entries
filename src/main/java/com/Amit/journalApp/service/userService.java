@@ -2,6 +2,7 @@ package com.Amit.journalApp.service;
 
 import com.Amit.journalApp.Controller.Entity.User;
 import com.Amit.journalApp.Repository.userRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -12,6 +13,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
+@Slf4j
 public class userService {
 
 
@@ -33,8 +35,14 @@ public class userService {
         user.setRoles(Arrays.asList("USER"));
         userRepository.save(user);
        }
+
        catch(Exception e){
-           return false;
+         log.error("Error occurrred for {} :", user.getUserName(), e);
+         log.warn("Amit");
+           log.info("IIII");
+           log.debug("DDDD");
+           log.trace("TTTTT");
+
        }
        return true;
     }

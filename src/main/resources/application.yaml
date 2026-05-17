@@ -1,12 +1,11 @@
-
 spring:
-  data:
-    mongodb:
-      uri: mongodb+srv://amitranjan:Gyanichand@amit.vv9ywsu.mongodb.net/journaldb?retryWrites=true&w=majority&appName=Amit
-      database: journaldb
-      auto-index-creation: true
+  profiles:
+    active: prod
 
-server:
-  port: 8080
-  servlet:
-    context-path: /journal
+
+logging:
+  level:
+    com:
+      Amit:
+        journalApp: DEBUG
+
