@@ -1,0 +1,22 @@
+package com.Amit.journalApp.Controller.Entity;
+
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.stereotype.Component;
+
+import java.time.LocalDateTime;
+
+@Document(collection="config_journal_app")
+@Data
+@NoArgsConstructor
+
+
+public class configJournalAppEntity {
+    private String key;
+    private String value;
+
+}

@@ -3,9 +3,5 @@ spring:
     active: prod
 
 
-logging:
-  level:
-    com:
-      Amit:
-        journalApp: DEBUG
+
 

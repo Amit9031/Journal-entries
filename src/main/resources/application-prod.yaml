@@ -6,6 +6,21 @@ spring:
       database: journaldb
       auto-index-creation: true
 
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: amitrajr7@gmail.com
+    password: tmdn jsbi qucb atjh
+
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+
 server:
   port: 8081
   servlet:
